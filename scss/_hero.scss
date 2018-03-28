@@ -1,0 +1,20 @@
+.hero {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+  // height: 200px;
+}
+
+.hero-title {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-style: italic;
+  color: $dark;
+}
+
+.hero-desc {
+  color: $secondary;
+  font-family: 'Roboto Condensed', sans-serif;
+}
