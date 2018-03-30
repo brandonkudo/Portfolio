@@ -52,3 +52,31 @@
     width: 100vw;
   }
 }
+
+.carousel-container {
+  position: relative;
+  .carousel-buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    .carousel-button {
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      border: 1px solid grey;
+      margin: 0 5px 0 5px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.btn-bg-grey {
+  background-color: grey;
+}
