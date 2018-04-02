@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
 $secondary: #55d67e;
 // $secondary: #f2ee29;
 $dark: #303030;

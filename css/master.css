@@ -47,12 +47,26 @@ header {
   flex-direction: column;
   padding: 20px;
   justify-content: center; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .hero {
+      align-items: center;
+      padding: 100px; } }
+  @media (min-width: 1024px) {
+    .hero {
+      align-items: center;
+      padding: 100px; } }
 
 .hero-title {
   font-size: 50px;
   text-transform: uppercase;
   font-style: italic;
   color: #303030; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .hero-title {
+      font-size: 70px; } }
+  @media (min-width: 1024px) {
+    .hero-title {
+      font-size: 70px; } }
 
 .hero-desc {
   color: #55d67e;
@@ -77,7 +91,27 @@ header {
     font-style: italic; }
 
 .projects-body {
-  background-color: #303030; }
+  background-color: #303030;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center; }
+  @media (min-width: 1024px) {
+    .projects-body {
+      flex-direction: row; } }
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .project {
+      flex-direction: row; } }
+  @media (min-width: 1024px) {
+    .project {
+      flex-direction: column;
+      width: 30vw;
+      margin: 10px; } }
 
 .project-top {
   padding: 20px;
@@ -93,17 +127,26 @@ header {
     font-family: 'Roboto Condensed', sans-serif;
     color: white;
     font-size: 12px;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
   .project-top .project-link {
     font-size: 12px;
     color: lightblue; }
 
-.project-carousel img {
+.st-project-carousel img, .jf-project-carousel img {
   width: 100vw; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .st-project-carousel img, .jf-project-carousel img {
+      width: 50vw; } }
+  @media (min-width: 1024px) {
+    .st-project-carousel img, .jf-project-carousel img {
+      width: 30vw; } }
 
-.carousel-container {
+.st-carousel-container, .jf-carousel-container {
   position: relative; }
-  .carousel-container .carousel-buttons {
+  .st-carousel-container .st-carousel-buttons, .st-carousel-container .jf-carousel-buttons, .jf-carousel-container .st-carousel-buttons, .jf-carousel-container .jf-carousel-buttons {
     position: absolute;
     bottom: 10px;
     left: 0;
@@ -112,16 +155,16 @@ header {
     z-index: 1000;
     display: flex;
     justify-content: center; }
-    .carousel-container .carousel-buttons .carousel-button {
+    .st-carousel-container .st-carousel-buttons .st-carousel-button, .st-carousel-container .st-carousel-buttons .jf-carousel-button, .st-carousel-container .jf-carousel-buttons .st-carousel-button, .st-carousel-container .jf-carousel-buttons .jf-carousel-button, .jf-carousel-container .st-carousel-buttons .st-carousel-button, .jf-carousel-container .st-carousel-buttons .jf-carousel-button, .jf-carousel-container .jf-carousel-buttons .st-carousel-button, .jf-carousel-container .jf-carousel-buttons .jf-carousel-button {
       width: 8px;
       height: 8px;
       border-radius: 100%;
-      border: 1px solid grey;
+      border: 1px solid lightgrey;
       margin: 0 5px 0 5px; }
-      .carousel-container .carousel-buttons .carousel-button:hover {
+      .st-carousel-container .st-carousel-buttons .st-carousel-button:hover, .st-carousel-container .st-carousel-buttons .jf-carousel-button:hover, .st-carousel-container .jf-carousel-buttons .st-carousel-button:hover, .st-carousel-container .jf-carousel-buttons .jf-carousel-button:hover, .jf-carousel-container .st-carousel-buttons .st-carousel-button:hover, .jf-carousel-container .st-carousel-buttons .jf-carousel-button:hover, .jf-carousel-container .jf-carousel-buttons .st-carousel-button:hover, .jf-carousel-container .jf-carousel-buttons .jf-carousel-button:hover {
         cursor: pointer; }
 
 .btn-bg-grey {
-  background-color: grey; }
+  background-color: lightgrey; }
 
 /*# sourceMappingURL=master.css.map */

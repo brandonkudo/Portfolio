@@ -5,6 +5,14 @@
   padding: 20px;
   justify-content: center;
   // height: 200px;
+  @include tablet {
+    align-items: center;
+    padding: 100px;
+  }
+  @include desktop {
+    align-items: center;
+    padding: 100px;
+  }
 }
 
 .hero-title {
@@ -12,6 +20,12 @@
   text-transform: uppercase;
   font-style: italic;
   color: $dark;
+  @include tablet {
+    font-size: 70px;
+  }
+  @include desktop {
+    font-size: 70px;
+  }
 }
 
 .hero-desc {
