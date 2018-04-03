@@ -2,16 +2,16 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 50px 20px 20px 20px;
   justify-content: center;
   // height: 200px;
   @include tablet {
     align-items: center;
-    padding: 100px;
+    padding: 150px 100px 100px 100px;
   }
   @include desktop {
     align-items: center;
-    padding: 100px;
+    padding: 150px 100px 100px 100px;
   }
 }
 

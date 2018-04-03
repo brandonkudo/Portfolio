@@ -11,6 +11,9 @@
   background-color: $secondary;
   padding: 20px;
   height: 50px;
+  @include desktop {
+    justify-content: center;
+  }
   p {
     font-size: 20px;
     color: $dark;
@@ -27,6 +30,14 @@
   justify-content: center;
   @include desktop {
     flex-direction: row;
+    padding: 10px;
+    background: repeating-linear-gradient(
+      45deg,
+      $dark,
+      $dark 3px,
+      #333333 3px,
+      #333333 6px
+    );
   }
 }
 
@@ -43,10 +54,13 @@
   }
   @include desktop {
     flex-direction: column;
-    width: 30vw;
-    margin: 10px;
-    background-color: grey;
+    width: 40vw;
+    margin: 20px;
+    background-color: transparent;
+    // background-color: white;
+    // background-image: linear-gradient(to bottom, #b2b2b2,#808080);
     border-radius: 3px;
+    // box-shadow: 1px 1px 1px black;
     // height: 450px;
   }
 }
@@ -80,11 +94,14 @@
     width: 100vw;
     @include tablet {
       width: 50vw;
-      height: 100%;
+      display: flex;
+      flex-grow: 1;
     }
     @include desktop {
-      width: 30vw;
-      transform: translateY(5px);
+      width: 40vw;
+      display: flex;
+      flex-grow: 1;
+      // transform: translateY(5px);
     }
   }
 }
