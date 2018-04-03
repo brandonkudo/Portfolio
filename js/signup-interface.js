@@ -3,6 +3,7 @@ $(document).ready(function() {
     headerToggle();
     stjornuSlider();
     jeffreysSlider();
+    ivetSlider();
   } catch(e){
     console.log(e);
   }
@@ -59,6 +60,30 @@ function jeffreysSlider() {
       jfCounter = i;
       $(jfButtonArray[jfCounter]).addClass('btn-bg-grey');
       $(jfImgArray[jfCounter]).show();
+    });
+  }
+}
+
+function ivetSlider() {
+  let ivCounter = 0;
+  let ivImgArray = $('.iv-image').toArray();
+  $(ivImgArray).hide();
+  $(ivImgArray[0]).show();
+
+  for (let i = 0; i < ivImgArray.length; i++) {
+    $('.iv-carousel-buttons').append('<div class="iv-carousel-button"></div>');
+  }
+
+  let ivButtonArray = $('.iv-carousel-button').toArray();
+  $(ivButtonArray[0]).addClass('btn-bg-grey');
+
+  for (let i = 0; i < ivImgArray.length; i++) {
+    $(ivButtonArray[i]).click(function() {
+      $(ivButtonArray[i]).siblings().removeClass('btn-bg-grey');
+      $(ivImgArray[ivCounter]).hide();
+      ivCounter = i;
+      $(ivButtonArray[ivCounter]).addClass('btn-bg-grey');
+      $(ivImgArray[ivCounter]).show();
     });
   }
 }

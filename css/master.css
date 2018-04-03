@@ -120,7 +120,7 @@ header {
     font-style: italic; }
 
 .projects-body {
-  background-color: #303030;
+  background: repeating-linear-gradient(45deg, #303030, #303030 3px, #333333 3px, #333333 6px);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -134,25 +134,25 @@ header {
 .project {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between; }
   @media (min-width: 768px) and (max-width: 1023px) {
     .project {
-      flex-direction: row; }
-      .project:nth-child(2n) {
-        background-color: grey; } }
+      flex-direction: row;
+      border-bottom: 1px solid black;
+      align-items: center; } }
   @media (min-width: 1024px) {
     .project {
       flex-direction: column;
       width: 40vw;
-      margin: 20px;
-      background-color: transparent;
-      border-radius: 3px; } }
+      margin: 20px; } }
 
 .project-top {
   padding: 20px;
   display: flex;
   flex-direction: column; }
+  @media (min-width: 1024px) {
+    .project-top {
+      padding: 20px 0 20px 0; } }
   .project-top .project-title {
     color: #a34646;
     font-size: 35px;
@@ -168,22 +168,22 @@ header {
     font-size: 12px;
     color: lightblue; }
 
-.st-project-carousel img, .jf-project-carousel img {
+.st-project-carousel img, .jf-project-carousel img, .iv-project-carousel img {
   width: 100vw; }
   @media (min-width: 768px) and (max-width: 1023px) {
-    .st-project-carousel img, .jf-project-carousel img {
+    .st-project-carousel img, .jf-project-carousel img, .iv-project-carousel img {
       width: 50vw;
       display: flex;
       flex-grow: 1; } }
   @media (min-width: 1024px) {
-    .st-project-carousel img, .jf-project-carousel img {
+    .st-project-carousel img, .jf-project-carousel img, .iv-project-carousel img {
       width: 40vw;
       display: flex;
       flex-grow: 1; } }
 
-.st-carousel-container, .jf-carousel-container {
+.st-carousel-container, .jf-carousel-container, .iv-carousel-container {
   position: relative; }
-  .st-carousel-container .st-carousel-buttons, .st-carousel-container .jf-carousel-buttons, .jf-carousel-container .st-carousel-buttons, .jf-carousel-container .jf-carousel-buttons {
+  .st-carousel-container .st-carousel-buttons, .st-carousel-container .jf-carousel-buttons, .st-carousel-container .iv-carousel-buttons, .jf-carousel-container .st-carousel-buttons, .jf-carousel-container .jf-carousel-buttons, .jf-carousel-container .iv-carousel-buttons, .iv-carousel-container .st-carousel-buttons, .iv-carousel-container .jf-carousel-buttons, .iv-carousel-container .iv-carousel-buttons {
     position: absolute;
     bottom: 10px;
     left: 0;
@@ -192,13 +192,13 @@ header {
     z-index: 1000;
     display: flex;
     justify-content: center; }
-    .st-carousel-container .st-carousel-buttons .st-carousel-button, .st-carousel-container .st-carousel-buttons .jf-carousel-button, .st-carousel-container .jf-carousel-buttons .st-carousel-button, .st-carousel-container .jf-carousel-buttons .jf-carousel-button, .jf-carousel-container .st-carousel-buttons .st-carousel-button, .jf-carousel-container .st-carousel-buttons .jf-carousel-button, .jf-carousel-container .jf-carousel-buttons .st-carousel-button, .jf-carousel-container .jf-carousel-buttons .jf-carousel-button {
+    .st-carousel-container .st-carousel-buttons .st-carousel-button, .st-carousel-container .st-carousel-buttons .jf-carousel-button, .st-carousel-container .st-carousel-buttons .iv-carousel-button, .st-carousel-container .jf-carousel-buttons .st-carousel-button, .st-carousel-container .jf-carousel-buttons .jf-carousel-button, .st-carousel-container .jf-carousel-buttons .iv-carousel-button, .st-carousel-container .iv-carousel-buttons .st-carousel-button, .st-carousel-container .iv-carousel-buttons .jf-carousel-button, .st-carousel-container .iv-carousel-buttons .iv-carousel-button, .jf-carousel-container .st-carousel-buttons .st-carousel-button, .jf-carousel-container .st-carousel-buttons .jf-carousel-button, .jf-carousel-container .st-carousel-buttons .iv-carousel-button, .jf-carousel-container .jf-carousel-buttons .st-carousel-button, .jf-carousel-container .jf-carousel-buttons .jf-carousel-button, .jf-carousel-container .jf-carousel-buttons .iv-carousel-button, .jf-carousel-container .iv-carousel-buttons .st-carousel-button, .jf-carousel-container .iv-carousel-buttons .jf-carousel-button, .jf-carousel-container .iv-carousel-buttons .iv-carousel-button, .iv-carousel-container .st-carousel-buttons .st-carousel-button, .iv-carousel-container .st-carousel-buttons .jf-carousel-button, .iv-carousel-container .st-carousel-buttons .iv-carousel-button, .iv-carousel-container .jf-carousel-buttons .st-carousel-button, .iv-carousel-container .jf-carousel-buttons .jf-carousel-button, .iv-carousel-container .jf-carousel-buttons .iv-carousel-button, .iv-carousel-container .iv-carousel-buttons .st-carousel-button, .iv-carousel-container .iv-carousel-buttons .jf-carousel-button, .iv-carousel-container .iv-carousel-buttons .iv-carousel-button {
       width: 8px;
       height: 8px;
       border-radius: 100%;
       border: 1px solid lightgrey;
       margin: 0 5px 0 5px; }
-      .st-carousel-container .st-carousel-buttons .st-carousel-button:hover, .st-carousel-container .st-carousel-buttons .jf-carousel-button:hover, .st-carousel-container .jf-carousel-buttons .st-carousel-button:hover, .st-carousel-container .jf-carousel-buttons .jf-carousel-button:hover, .jf-carousel-container .st-carousel-buttons .st-carousel-button:hover, .jf-carousel-container .st-carousel-buttons .jf-carousel-button:hover, .jf-carousel-container .jf-carousel-buttons .st-carousel-button:hover, .jf-carousel-container .jf-carousel-buttons .jf-carousel-button:hover {
+      .st-carousel-container .st-carousel-buttons .st-carousel-button:hover, .st-carousel-container .st-carousel-buttons .jf-carousel-button:hover, .st-carousel-container .st-carousel-buttons .iv-carousel-button:hover, .st-carousel-container .jf-carousel-buttons .st-carousel-button:hover, .st-carousel-container .jf-carousel-buttons .jf-carousel-button:hover, .st-carousel-container .jf-carousel-buttons .iv-carousel-button:hover, .st-carousel-container .iv-carousel-buttons .st-carousel-button:hover, .st-carousel-container .iv-carousel-buttons .jf-carousel-button:hover, .st-carousel-container .iv-carousel-buttons .iv-carousel-button:hover, .jf-carousel-container .st-carousel-buttons .st-carousel-button:hover, .jf-carousel-container .st-carousel-buttons .jf-carousel-button:hover, .jf-carousel-container .st-carousel-buttons .iv-carousel-button:hover, .jf-carousel-container .jf-carousel-buttons .st-carousel-button:hover, .jf-carousel-container .jf-carousel-buttons .jf-carousel-button:hover, .jf-carousel-container .jf-carousel-buttons .iv-carousel-button:hover, .jf-carousel-container .iv-carousel-buttons .st-carousel-button:hover, .jf-carousel-container .iv-carousel-buttons .jf-carousel-button:hover, .jf-carousel-container .iv-carousel-buttons .iv-carousel-button:hover, .iv-carousel-container .st-carousel-buttons .st-carousel-button:hover, .iv-carousel-container .st-carousel-buttons .jf-carousel-button:hover, .iv-carousel-container .st-carousel-buttons .iv-carousel-button:hover, .iv-carousel-container .jf-carousel-buttons .st-carousel-button:hover, .iv-carousel-container .jf-carousel-buttons .jf-carousel-button:hover, .iv-carousel-container .jf-carousel-buttons .iv-carousel-button:hover, .iv-carousel-container .iv-carousel-buttons .st-carousel-button:hover, .iv-carousel-container .iv-carousel-buttons .jf-carousel-button:hover, .iv-carousel-container .iv-carousel-buttons .iv-carousel-button:hover {
         cursor: pointer; }
 
 .btn-bg-grey {

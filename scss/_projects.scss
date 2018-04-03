@@ -23,7 +23,13 @@
 }
 
 .projects-body {
-  background-color: $dark;
+  background: repeating-linear-gradient(
+    45deg,
+    $dark,
+    $dark 3px,
+    #333333 3px,
+    #333333 6px
+  );
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -44,24 +50,18 @@
 .project {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
   @include tablet {
     flex-direction: row;
-    &:nth-child(2n) {
-      background-color: grey;
-    }
+    border-bottom: 1px solid black;
+    align-items: center;
+
   }
   @include desktop {
     flex-direction: column;
     width: 40vw;
     margin: 20px;
-    background-color: transparent;
-    // background-color: white;
-    // background-image: linear-gradient(to bottom, #b2b2b2,#808080);
-    border-radius: 3px;
-    // box-shadow: 1px 1px 1px black;
-    // height: 450px;
+
   }
 }
 
@@ -69,6 +69,9 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
+  @include desktop {
+    padding: 20px 0 20px 0;
+  }
   .project-title {
     color: $secondary;
     font-size: 35px;
@@ -81,7 +84,6 @@
     color: white;
     font-size: 12px;
     margin-bottom: 10px;
-    // font-weight: 100;
   }
   .project-link {
     font-size: 12px;
@@ -89,7 +91,7 @@
   }
 }
 
-.st-project-carousel, .jf-project-carousel {
+.st-project-carousel, .jf-project-carousel, .iv-project-carousel {
   img {
     width: 100vw;
     @include tablet {
@@ -106,9 +108,9 @@
   }
 }
 
-.st-carousel-container, .jf-carousel-container {
+.st-carousel-container, .jf-carousel-container, .iv-carousel-container {
   position: relative;
-  .st-carousel-buttons, .jf-carousel-buttons {
+  .st-carousel-buttons, .jf-carousel-buttons, .iv-carousel-buttons {
     position: absolute;
     bottom: 10px;
     left: 0;
@@ -117,7 +119,7 @@
     z-index: 1000;
     display: flex;
     justify-content: center;
-    .st-carousel-button, .jf-carousel-button {
+    .st-carousel-button, .jf-carousel-button, .iv-carousel-button {
       width: 8px;
       height: 8px;
       border-radius: 100%;
